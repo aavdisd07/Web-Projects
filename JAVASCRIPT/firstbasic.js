@@ -1,4 +1,4 @@
 console.log("hello")
-let name='Avantika'
+let name='sushant '
 let age=21
 console.table([name,age])
