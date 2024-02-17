@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+#main{
+ height:80%;
+ width: 80%;
+ margin-left: 10%;
+ margin-right: 10%;
+ position: absolute;
+ top: 70px;
+ border: 6px solid red;
+ border-radius: 12px;
+}
+#nav{
+    height:50px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+    padding: 15px;
+}
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2px;
+}
+
+#nav-part1 i{
+    font-size: 20px;
+    border: 1.5px solid black;
+    font-weight:700;
+    padding: 2px 9px;
+    border-radius: 50px;
+    background: orangered;
+    color: white;
+}
+#nav h3{
+    font-size: 20px;
+    border: 1.5px solid black;
+    font-weight:500;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: white;
+}
+#nav-part2 h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+}
+#nav-part3 button{
+    padding: 7px 10px;
+    border: 1.5px solid black;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#btn2{
+    background-color: orangered;
+    color: white;
+    border: none;
+}
+#main>h1{
+    color: red;
+    font-size: 140px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family: monospace;
+    width: 100%;
+    text-align: center;
+}
+img{
+    width:490px;
+    height:300px;
+    position: absolute;
+    object-fit: cover;
+    object-position: top;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 70px;
+    border: 3px rgb(96, 155, 179) solid;
+}
+#img1{
+    transform: translate(-50%,-50%) rotate(-25deg);
+}
+#img2{
+    transform: translate(-50%,-50%) rotate(-14deg);
+}
+#img4{
+    transform:translate(-50%,-50%) ;
+}
+#btm-text{
+    position: absolute;
+    bottom:5%;
+    left:3%;
+    font-size: 17px;
+    font-style: oblique;
+}
+#bot-left{
+    position: absolute;
+    bottom:5%;
+    right:4%;
+    gap:50px;
+    font-size:17px;
+    font-style: oblique;
+}
+#bot-left h4{
+    padding :1px;
+}
+#bot-left i{
+    gap:25px;
+    margin:7px 10px 7px;
+    color: orangered;
+    font-size: 20px;
+}
+#bot-left i:hover{
+    color:black;
+}
