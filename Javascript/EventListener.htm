@@ -1,0 +1,42 @@
+<html>
+    <title>
+        Add Event Listener
+    </title>
+    <body>
+        <br><hr>
+        <div id="h1">Count:</div>
+        <button id="btn">START</button>
+       <br>  <br>  <br>  <br>
+       <button id="stop">STOP</button>
+    
+    </body>
+    <script>
+        var x=0;
+        document.getElementById('btn').addEventListener("click",increase);
+           
+        
+        function increase(){
+            x+=1;
+        document.getElementById('h1').innerText=x;
+            
+           
+    }
+        document.getElementById('btn').addEventListener("mouseenter",Colorchange);
+        function Colorchange(){
+            document.getElementById('h1').style.fontSize="100px";
+            document.getElementById('h1').style.color="Blue";
+        }
+        document.getElementById('btn').addEventListener("mouseleave",Sizechange);
+        function Sizechange(){
+            document.getElementById('h1').style.color="Pink";
+
+        }
+        function makered(){
+            document.getElementById('btn').style.background="Red";
+            document.getElementById('btn').removeEventListener("click",increase);
+            alert(x);
+            
+        }
+       document.getElementById('stop').addEventListener("click",makered);
+    </script>
+</html>

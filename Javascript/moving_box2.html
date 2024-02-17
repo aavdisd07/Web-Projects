@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Second Moving Box</title>
+    <style>
+      #big {
+        width: 400px;
+        height: 400px;
+        /* background-color: black; */
+        position: relative;
+        margin-top: 10px;
+      }
+      #orange {
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background-color: rgb(233, 46, 13);
+        position: absolute;
+        border-radius: 0px 86px 0px 82px;
+      }
+      #blue {
+        width: 50px;
+        height: 50px;
+        background-color:rgb(233, 46, 13);
+        position: absolute;
+        top: 0;
+        left: 350px;
+        border-radius: 127px 0px 127px 0px;
+      }
+      #pink {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(233, 46, 13);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 127px 0px 127px 0px;
+      }
+      #green {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(233, 46, 13);
+        position: absolute;
+        border-radius: 0px 86px 0px 86px;
+        bottom: 0;
+        right: 0;
+      }
+      #red {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(233, 46, 13);
+        position: absolute;
+        border-radius: 50% 50%;
+        top: 180px;
+        left: 182px;
+      }
+    </style>
+    <script>
+      function move() {
+        var o = document.getElementById("orange");
+        var b = document.getElementById("blue");
+        var p = document.getElementById("pink");
+        var g = document.getElementById("green");
+
+        var anime1 = setInterval(animate, 2);
+        var anime2 = setInterval(animate_blue,2);
+        var anime3=setInterval(animate_pink,2);
+        var anime4=setInterval(animate_green,2);
+        
+        var ot=0;
+        var ol=0;
+        function animate(){
+          ot++;
+          ol++;
+          if(ot==148||ol==151){
+            clearInterval(anime1);
+          }
+          else{
+            o.style.top=ot+"px";
+            o.style.left=ol+"px";
+          }
+        }
+         
+        var bt=0;
+        var bl=350;
+        function animate_blue(){
+          bt++;
+          bl--;
+          if(bt==148||bl==201){
+            clearInterval(anime2);
+          }
+          else{
+            b.style.top=bt+"px";
+            b.style.left=bl+"px";
+          }
+
+        }
+         
+        var pb=0;
+        var pl=0;
+        function animate_pink(){
+          pb++;
+          pl++;
+          if(pb==147||pl==149)
+          {
+       
+            clearInterval(anime3);
+          }
+          else{
+            p.style.bottom=pb+"px";
+            p.style.left=pl+"px";
+          }
+        }
+        var gb=0;
+        var gr=0;
+        function animate_green(){
+           gb++;
+           gr++;
+           if(gb==152||gr==148){
+            clearInterval(anime4);
+
+           }
+           else{
+            g.style.bottom=gb+"px";
+            g.style.right=gr+"px";
+           }
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <button id="btn" onclick="move()">Move</button>
+      <div id="big">
+        <div id="pink"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+        <div id="orange"></div>
+      </div>
+    </center>
+   
+  </body>
+</html>

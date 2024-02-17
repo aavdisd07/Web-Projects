@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Star Pattern</title>
+        <script>
+           var rows= prompt("Enter rows length:","");
+           var col=prompt("Enter columns length:","");
+
+            printStar(rows,col);
+            
+            function printStar(r,col){
+                for(var i=0;i<r;i++)
+                {
+                    for(var j=0;j<=i;j++){
+                       document.write("*");
+                    }
+                  document.write("<br>");
+                }
+
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

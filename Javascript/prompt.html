@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            Prompt function 
+        </title>
+    </head>
+    <body>
+        Name:<h2 id="h2"></h2>
+        <button onclick="call()">Call</button>
+    </body>
+    <script type="text/javascript">
+        function call(){
+            var name=prompt("Enter your name");
+            document.getElementById('h2').innerHTML=name;
+        }
+    </script>
+</html>

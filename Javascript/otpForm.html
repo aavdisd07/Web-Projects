@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Otp Form</title>
+     <script type="text/javascript">
+        
+        function GetOtp(){
+        var x=Math.random()*10000;
+           alert(x);
+           //document.write(Math.floor(x));
+          document.getElementsByTagName("button")[1].innerText=Math.floor(x);
+        }
+     </script>
+    
+    
+    </head>
+    <body>
+        <button onclick="GetOtp()"style="text-size:50px">Get OTP</button>
+        <br>
+        <br>
+        <hr>
+        <button onclick="this.style.display='none'"></button>
+    </body>
+</html>

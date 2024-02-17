@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <h2 style="margin:0% 50%;">Calculator</h2>
+        <input type="number" name ="number1" id="num1">
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        
+        </select>
+        <input type="number" name="num2" id="num2">
+        <br>
+        <br>
+        <button onclick="cal()">Calculate</button>
+        <input type="text" name="res" id="res" readonly=" "/>
+
+    </body>
+    <script type="text/javascript">
+        function cal(){
+            var a=document.getElementById('num1').value;
+            var b=document.getElementById('num2').value;
+            var c=document.getElementById('op').value;
+            if(c=='+'){
+                var res=parseInt(a)+parseInt(b);
+            }
+
+            if(c=='-'){
+                var res=parseInt(a)-parseInt(b);
+            }
+
+            if(c=='*'){
+                var res=parseInt(a)*parseInt(b);
+            }
+
+            if(c=='/'){
+                var res=parseInt(a)/parseInt(b);
+            }
+
+            document.getElementById('res').value=res;
+        }
+    </script>
+
+</html>

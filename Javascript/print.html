@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Print Function</title>
+  </head>
+  <body id="body">
+    <centre>
+      <h1>Printining Data</h1>
+    <p id="data">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+      provident at dolorem magni, ea fugiat alias autem commodi libero vel,
+      laudantium beatae veniam excepturi eius repudiandae in nisi error numquam
+      aperiam amet ut laboriosam illo doloremque! Cumque corrupti, dolorum
+      corporis at itaque quidem dicta qui blanditiis consectetur numquam
+      praesentium consequatur id iure sunt enim omnis similique ducimus ea,
+      nihil saepe adipisci obcaecati. Dolore velit asperiores dolorem illo
+      explicabo, molestiae vero deleniti! Ea accusantium, ut praesentium
+      doloremque repudiandae enim aspernatur sint repellat beatae libero. Enim
+      adipisci perferendis dicta. Expedita, praesentium, eligendi laboriosam at
+      ut amet ipsa temporibus a velit quas ullam? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Nulla voluptatem rem, provident animi sint
+      quia vitae aperiam dicta architecto cumque nostrum corrupti quae fugiat
+      voluptate incidunt sit molestias id facilis.
+    </p>
+    <h1>Till  here</h1>
+    <img
+      src="C:\Users\Rohit Deshmukh\OneDrive - SHRI GURU GOBIND SINGHJI INSTITUTE OF ENGINEERING AND TECHNOLOGY\Desktop\my photo.jpg"
+      width="50px"
+      height="50px"
+    />
+    <button style="margin: 10% 50%" onclick="printMyPage()">PRINT</button>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      nesciunt alias, numquam sequi possimus quos atque quam odit eum labore
+      placeat magnam autem at rerum deserunt aliquid facere, eligendi,
+      reprehenderit sapiente earum quo inventore provident? Impedit porro
+      excepturi tempora quas fugit cumque cupiditate, esse molestias,
+      exercitationem saepe modi reprehenderit repudiandae.
+    </p>
+  </centre>
+  </body>
+  <script>
+    function printMyPage() {
+ 
+      // Swaping of body and data text is here 
+ 
+      var body=document.getElementById('body').innerHTML;
+      var data=document.getElementById('data').innerHTML;
+      document.getElementById('body').innerHTML=data;
+      window.print();
+      document.getElementById('body').innerHTML=body;
+      //window.print();
+    }
+  </script>
+</html>

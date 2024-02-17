@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>To check the Validaty of number</title>
+    <script>
+      function check(element) {
+        document.getElementById("div").innerText = element.value;
+        document.getElementById("div").style.color = "red";
+        if (isNaN(element.value)) {
+          document.getElementById("div").innerText = "Error";
+        } else {
+          if (element.value.length > 10) {
+            document.getElementById("div").innerText =
+              "Enter Upto 10 Digit only";
+          } else {
+            document.getElementById("div").innerText = "";
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Enter the number:<br />
+    <input type="text" name="number" onkeyup="check(this)" />
+    <div id="div"></div>
+  </body>
+</html>
