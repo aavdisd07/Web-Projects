@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Blinking Page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "poppins", sans-serif;
+        min-height: 100vh;
+        background-color: rgb(22, 22, 67);
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        color: white;
+        background: transparent;
+        border-radius: 50px;
+        border: 3px solid white;
+        cursor: pointer;
+        padding: 0.8em 2em;
+        outline: none;
+        position: relative;
+        letter-spacing: 2px;
+        transition: 0.2s ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: rgb(22, 22, 67);
+      }
+      .btn-click {
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        color: transparent;
+        animation: blink 0.8s infinite;
+      }
+
+      .btn-click::before {
+        content: "Click me";
+      }
+      .btn-click:nth-child(1) {
+        top: -30px;
+        left: -40px;
+        font-size: 12px;
+        transform: rotate(-20deg);
+        animation-duration: 0.5s;
+      }
+
+      .btn-click:nth-child(2) {
+        top: -20px;
+        right: -40px;
+        font-size: 12px;
+        transform: rotate(15deg);
+        animation-duration: 0.3s;
+      }
+
+      .btn-click:nth-child(3) {
+        top: -60px;
+        left: 15px;
+        font-size: 16px;
+        transform: rotate(10deg);
+        animation-duration: 1s;
+      }
+
+      .btn-click:nth-child(4) {
+        top: -70px;
+        left: 95px;
+        font-size: 18px;
+        transform: rotate(2deg);
+        animation-duration: 0.7s;
+      }
+
+      
+      .btn-click:nth-child(5) {
+        top: 80px;
+        left: 105px;
+        font-size: 14px;
+        transform: rotate(-20deg);
+        animation-duration: 0.8s;
+      }
+
+      .btn-click:nth-child(6) {
+        top: 80px;
+        left: 5px;
+        font-size: 12px;
+        transform: rotate(10deg);
+        animation-duration: 1.2s;
+      }
+      button:hover.btn-click::before{
+        content:"Do it";
+        width:70px;
+      }
+      @keyframes blick {
+        25%,75%{
+            color:transparent;
+        }
+        40%,60%{
+            color:#c1dae8;
+        }
+        
+      } 
+
+    </style>
+  </head>
+  <body>
+    <div class="btn_group">
+      <button>Click me !
+      <div class="btn-click">Click me</div>
+      <div class="btn-click">Click me</div>
+      <div class="btn-click">Click me</div>
+      <div class="btn-click">Click me</div>
+      <div class="btn-click">Click me</div>
+    </button>
+    </div>
+  </body>
+</html>
